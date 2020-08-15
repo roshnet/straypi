@@ -1,8 +1,9 @@
 import express from 'express'
+import config from './config'
 import router from './controllers'
 
 const app: express.Application = express()
-const port: number = 3000
+const port = config.port
 
 app.use('/', router)
 
