@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import init from './init'
+import encryption from './encryption'
 import yesno from './yesno'
 
 const router = Router()
@@ -9,5 +9,6 @@ router.get('/', (req, resp) => {
 })
 
 router.use('/yesno', yesno)
+router.use('/crypt', encryption)
 
 export default router
